@@ -1,0 +1,16 @@
+<ion-content>
+  <form [formGroup]="formularioNota" (ngSubmit)="editaNota()">
+    <ion-item>
+      <ion-label>Título: </ion-label>
+      <ion-input type="text" formControlName="title" [(ngModel)]="this.nota.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descripción: </ion-label>
+      <ion-textarea formControlName="description" [(ngModel)]="this.nota.description"></ion-textarea>
+    </ion-item>
+    <ion-button expand="full" color="primary"
+     type="submit" (click)="editaNota()">Aceptar</ion-button>
+     <ion-button expand="full" color="primary"
+     type="submit" (click)="cancelar()">Cancelar</ion-button>
+  </form>
+</ion-content>
